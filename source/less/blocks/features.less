@@ -1,0 +1,79 @@
+.features {
+  margin-top: 30px;
+}
+
+.features__item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding-left: 80px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @green;
+  }
+
+  &--leaf::after {
+    content: "";
+    position: absolute;
+    top: calc((60px - 29px)/2);
+    left: calc((60px - 26px)/2);
+
+    width: 26px;
+    height: 29px;
+
+    background-image: url("../../img/features-leaf.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--powder::after {
+    content: "";
+    position: absolute;
+    top: calc((60px - 31px)/2);
+    left: calc((60px - 30px)/2);
+
+    width: 31px;
+    height: 31px;
+
+    background-image: url("../../img/features-powder.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--dining::after {
+    content: "";
+    position: absolute;
+    top: calc((60px - 30px)/2);
+    left: calc((60px - 23px)/2);
+
+    width: 23px;
+    height: 30px;
+
+    background-image: url("../../img/features-dining.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--result::after {
+    content: "";
+    position: absolute;
+    top: calc((60px - 31px)/2);
+    left: calc((60px - 26px)/2);
+
+    width: 26px;
+    height: 31px;
+
+    background-image: url("../../img/features-result.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
