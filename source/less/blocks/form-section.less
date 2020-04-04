@@ -1,0 +1,66 @@
+.form-section__list {
+  .reset-list();
+}
+
+.form-section__item {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.form-section__label {
+  display: block;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.form-section__input[type="text"],
+.form-section__input[type="email"],
+.form-section__input[type="tel"],
+.form-section__textarea {
+  width: 100%;
+  padding: 15px;
+
+  border: solid 1px @color-gray-400;
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: @color-gray-500;
+  }
+}
+
+// Радиокнопки и чекбоксы
+.form-section__label--radio,
+.form-section__label--checkbox {
+  position: relative;
+
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.form-section__label--radio::before,
+.form-section__label--checkbox::before {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+
+  width: 30px;
+  height: 30px;
+  margin-left: -45px;
+
+  background-color: @color-white-100;
+  border: 1px solid @color-gray-400;
+}
+
+.form-section__label--checkbox::before {
+  border-radius: 50%;
+}
+
+.form-section__textarea {
+  min-width: 280px;
+  min-height: 118px;
+
+  resize: vertical;
+}
