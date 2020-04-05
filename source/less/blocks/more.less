@@ -1,0 +1,30 @@
+.more {
+  padding-top: 80px;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @color-gray-500;
+}
+
+.more__link {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -40px;
+    left: 50%;
+
+    width: 31px;
+    height: 31px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transform: translate(-50%, -50%);
+  }
+}
