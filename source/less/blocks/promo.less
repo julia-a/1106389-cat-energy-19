@@ -1,11 +1,28 @@
 .promo {
-  position: relative;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+
+
+  @media (min-width: @tablet-width) {
+    min-height: 900px;
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 550px;
+  }
 }
 
 .promo__info {
-  min-height: 305px;
-  padding: 30px 20px;
-  
+  position: relative;
+
+  min-height: 480px;
+  padding-top: 30px;
+
   font-family: @oswald;
   font-size: 14px;
   font-weight: 400;
@@ -13,35 +30,73 @@
   text-align: center;
   color: @color-white-100;
 
-  background-color: @color-green-100;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+    padding-right: 162px;
+
+    text-align: left;
+    color: @color-black-100;
+
+    background-color: transparent;
+
+    z-index: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 60px;
+  }
 }
 
 .promo__title {
-  margin-top: 0;
-  font-size: 36px;
   font-weight: inherit;
+  font-size: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .promo__text {
-  margin-top: 10px;
-
-  font: inherit;
+  font-weight: inherit;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
-.promo__wrap {
+.promo__choose {
+  margin-top: 260px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 245px;
+  }
+}
+
+.promo__decor {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    background-color: @color-green-100;
+  }
 }
 
 .promo__img {
   position: absolute;
-  bottom: 40px;
-}
+  top: -290px;
+  left: 0;
 
-.promo__choose {
-  margin-top: 135px;
+  @media (min-width: @tablet-width) {
+    top: -200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 60px;
+    left: -180px;
+  }
 }
