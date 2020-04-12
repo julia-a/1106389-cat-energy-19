@@ -34,11 +34,19 @@
 
     border-bottom: none;
   }
+
+  @media (min-width: @desktop-width) {
+    color: @color-white-100;
+  }
 }
 
 .site-list__link--active {
   @media (min-width: @tablet-width) {
   border-bottom: 2px solid @color-green-100;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @color-white-100;
   }
 }
 

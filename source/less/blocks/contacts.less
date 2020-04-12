@@ -2,22 +2,22 @@
   position: relative;
 }
 
-.contacts__address-wrap {
+.contacts__info {
+  &--index {
+    background-color: @color-white-100;
+  }
+}
+
+.contacts__info-wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
 
-  &--index {
-    background-color: @color-white-100;
-    margin: 0 -20px;
-  }
-
   @media (min-width: @tablet-width) {
-    justify-content: space-between;
     min-height: 205px;
     padding: 65px;
-
   }
 
   @media (min-width: @desktop-width) {
@@ -27,6 +27,7 @@
 
     width: 570px;
     padding: 70px 76px 62px 76px;
+    background-color: @color-white-100;
   }
 }
 
@@ -67,8 +68,4 @@
     display: block;
     margin-top: 20px;
   }
-}
-
-.contacts__map {
-  margin: 0 -20px;
 }

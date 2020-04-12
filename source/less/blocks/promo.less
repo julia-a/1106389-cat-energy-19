@@ -1,26 +1,27 @@
 .promo {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
+  min-height: 500px;
 
+  background: linear-gradient(to bottom, @color-green-100 0%, @color-green-100 63.5%, @color-white-100 63.5%);
 
   @media (min-width: @tablet-width) {
-    min-height: 900px;
-    background-image: none;
+    min-height: 850px;
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    min-height: 550px;
+    position: relative;
+    top: -140px;
+
+    min-height: 600px;
+
+    background: linear-gradient(to right, @color-white-100 0%, @color-white-100 51%, @color-green-100 51%);
+    z-index: -1;
   }
 }
 
-.promo__info {
+.promo__wrap {
   position: relative;
 
-  min-height: 480px;
   padding-top: 30px;
 
   font-family: @oswald;
@@ -36,21 +37,55 @@
 
     text-align: left;
     color: @color-black-100;
-
-    background-color: transparent;
-
-    z-index: 2;
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
-    padding-top: 50px;
+    padding-top: 170px;
     padding-left: 80px;
-    padding-right: 60px;
+    padding-right: 690px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    width: 280px;
+    height: 271px;
+    background-image: url("../img/index-can-mobile@1x.png");
+
+    transform: translate(-50%, 0);
+
+    @media (min-width: @tablet-width) {
+      top: 85%;
+      left: 45%;
+
+      width: 709px;
+      height: 609px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
+
+      z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 35%;
+      left: 60%;
+
+      width: 552px;
+      height: 499px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      z-index: 1;
+    }
   }
 }
 
 .promo__title {
+  margin: 0;
   font-weight: inherit;
   font-size: 36px;
 
@@ -60,6 +95,7 @@
 }
 
 .promo__text {
+  margin-top: 19px;
   font-weight: inherit;
   text-transform: uppercase;
 
@@ -69,34 +105,10 @@
 }
 
 .promo__choose {
-  margin-top: 260px;
+  margin-top: 320px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
     width: 245px;
-  }
-}
-
-.promo__decor {
-  position: relative;
-
-  @media (min-width: @desktop-width) {
-    width: 50%;
-    background-color: @color-green-100;
-  }
-}
-
-.promo__img {
-  position: absolute;
-  top: -290px;
-  left: 0;
-
-  @media (min-width: @tablet-width) {
-    top: -200px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 60px;
-    left: -180px;
   }
 }
