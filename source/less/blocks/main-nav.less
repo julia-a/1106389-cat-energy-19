@@ -1,10 +1,27 @@
-.main-nav__toggle {
-  width: 25px;
-  height: 19px;
+.main-nav {
+  margin: 0 -20px;
 
+  border-top: 1px solid @color-gray-200;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    
+    border-top: none;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+  
   background-color: transparent;
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  
+  cursor: pointer;
   border: none;
 }

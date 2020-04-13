@@ -1,11 +1,29 @@
 .promo {
-  position: relative;
+  min-height: 500px;
+
+  background: linear-gradient(to bottom, @color-green-100 0%, @color-green-100 63.5%, @color-white-100 63.5%);
+
+  @media (min-width: @tablet-width) {
+    min-height: 850px;
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -140px;
+
+    min-height: 600px;
+
+    background: linear-gradient(to right, @color-white-100 0%, @color-white-100 51%, @color-green-100 51%);
+    z-index: -1;
+  }
 }
 
-.promo__info {
-  min-height: 305px;
-  padding: 30px 20px;
-  
+.promo__wrap {
+  position: relative;
+
+  padding-top: 30px;
+
   font-family: @oswald;
   font-size: 14px;
   font-weight: 400;
@@ -13,35 +31,84 @@
   text-align: center;
   color: @color-white-100;
 
-  background-color: @color-green-100;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+    padding-right: 162px;
+
+    text-align: left;
+    color: @color-black-100;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 170px;
+    padding-left: 80px;
+    padding-right: 690px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    width: 280px;
+    height: 271px;
+    background-image: url("../img/index-can-mobile@1x.png");
+
+    transform: translate(-50%, 0);
+
+    @media (min-width: @tablet-width) {
+      top: 85%;
+      left: 45%;
+
+      width: 709px;
+      height: 609px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
+
+      z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 35%;
+      left: 60%;
+
+      width: 552px;
+      height: 499px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      z-index: 1;
+    }
+  }
 }
 
 .promo__title {
-  margin-top: 0;
-  font-size: 36px;
+  margin: 0;
   font-weight: inherit;
+  font-size: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .promo__text {
-  margin-top: 10px;
-
-  font: inherit;
+  margin-top: 19px;
+  font-weight: inherit;
   text-transform: uppercase;
-}
 
-.promo__wrap {
-  position: relative;
-}
-
-.promo__img {
-  position: absolute;
-  bottom: 40px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .promo__choose {
-  margin-top: 135px;
+  margin-top: 320px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 245px;
+  }
 }
