@@ -1,3 +1,30 @@
+.form-section {
+  margin: 40px 0 8px 0;
+  padding: 0;
+
+  border: none;
+
+  &--choose-program {
+    margin: 0 -20px;
+    padding: 21px 20px 6px 20px;
+
+    border-top: 1px solid @color-gray-150;
+    border-bottom: 1px solid @color-gray-150;
+  }
+
+  &--contacts {
+    margin-top: 28px;
+  }
+
+  &--comment {
+    margin-top: 14px;
+  }
+
+  &--extra {
+    margin-top: 25px;
+  }
+}
+
 .form-section__list {
   .reset-list();
 }
@@ -5,7 +32,7 @@
 .form-section__item {
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .form-section__label {
@@ -19,7 +46,7 @@
 .form-section__input[type="tel"],
 .form-section__textarea {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
 
   border: solid 1px @color-gray-400;
 
@@ -35,32 +62,74 @@
   position: relative;
 
   display: block;
-  margin-bottom: 20px;
-  padding-left: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 45px;
+
+  cursor: pointer;
+  user-select: none;
 }
 
-.form-section__label--radio::before,
-.form-section__label--checkbox::before {
+.form-section__input+.form-section__label--radio::before,
+.form-section__input+.form-section__label--checkbox::before {
   content: "";
 
   position: absolute;
-  top: -5px;
+  top: 0;
+  left: 0;
 
   width: 30px;
   height: 30px;
-  margin-left: -45px;
 
-  background-color: @color-white-100;
   border: 1px solid @color-gray-400;
 }
 
-.form-section__label--checkbox::before {
+.form-section__input+.form-section__label--radio::before {
   border-radius: 50%;
 }
 
+.form-section__input:hover+.form-section__label--radio::before,
+.form-section__input:hover+.form-section__label--checkbox::before {
+  border: 1px solid @color-gray-450;
+}
+
+.form-section__input:hover+.form-section__label--radio,
+.form-section__input:hover+.form-section__label--checkbox {
+  opacity: 0.3;
+}
+
+.form-section__input:checked+.form-section__label--radio::after {
+  content: "";
+  top: 9px;
+  left: 9px;
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  background: @color-green-100;
+  border-radius: 50%;
+}
+
+.form-section__input:checked+.form-section__label--checkbox::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: 4px;
+
+  width: 22px;
+  height: 17px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .form-section__textarea {
-  min-width: 280px;
-  min-height: 118px;
+  width: 280px;
+  min-height: 150px;
 
   resize: vertical;
 }

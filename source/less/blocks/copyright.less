@@ -7,13 +7,17 @@
   line-height: 1;
   color: @color-gray-500;
 
-  &:hover .copyright__icon path,
-  &:focus .copyright__icon path {
-    fill: @color-green-100;
-  }
-
   &:active {
     opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  fill: @color-gray-470;
+
+  &:hover,
+  &:focus {
+    fill: @color-green-100;
   }
 }
 
