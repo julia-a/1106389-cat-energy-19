@@ -8,10 +8,18 @@
 
 .socials__item {
   margin-right: 37px;
+  
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
+  }
 }
 
 .socials__item:last-child {
   margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: -20px;
+  }
 }
 
 .socials__icon {
@@ -24,5 +32,26 @@
 
   &:active {
     fill-opacity: 0.3;
+  }
+
+  &--vk {
+    @media (min-width: @tablet-width) {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--insta {
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    @media (min-width: @tablet-width) {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

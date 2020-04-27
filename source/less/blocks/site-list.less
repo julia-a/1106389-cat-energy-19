@@ -24,10 +24,7 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 35px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 8px 0;
 
     font-size: 18px;
     font-weight: 400;
@@ -39,17 +36,21 @@
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
-    color: @color-white-100;
-  }
-}
 
-.site-list__link--active {
-  @media (min-width: @tablet-width) {
-  border-bottom: 2px solid @color-green-100;
+    &--index {
+      color: @color-white-100;
+    }
+
+    &--index-active {
+      color: @color-white-100;
+      border-bottom: 2px solid @color-white-100;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    border-bottom: 2px solid @color-white-100;
+  &--active {
+    @media (min-width: @tablet-width) {
+      border-bottom: 2px solid @color-green-100;
+    }
   }
 }
 

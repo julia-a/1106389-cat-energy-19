@@ -1,11 +1,19 @@
 .slider {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 53px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: -245px;
     padding-top: 0;
   }
+}
+
+.slider__images {
+  margin: 0 -20px;
 }
 
 .slider__label {
