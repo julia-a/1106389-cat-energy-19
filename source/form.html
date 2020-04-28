@@ -44,17 +44,17 @@
   </header>
 
   <!-- Main -->
-  <main class="page-main container">
-    <h1 class="title page-main__title">Подбор программы</h1>
+  <main class="page-main">
+    <h1 class="title page-main__title container">Подбор программы</h1>
 
     <!-- Form -->
     <section class="form">
       <form class="form__form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="form__desc">
+        <p class="form__desc container">
           Заполните анкету и мы подберем<br> 
           программу питания для вашего кота
         </p>
-        <div class="form__sections-wrap">
+        <div class="form__sections-wrap container">
           <fieldset class="form-section form-section--cat-info">
             <ul class="form-section__list">
               <li class="form-section__item">
@@ -89,46 +89,59 @@
           </fieldset>
         </div>
         <fieldset class="form-section form-section--contacts">
-          <legend class="title title--block">Контактные данные (владельца кота)</legend>
+          <div class="form-section__title-wrap">
+            <div class="container">
+              <legend class="form-section__title">Контактные данные<br>
+                (владельца кота)</legend>
+            </div>
+          </div>
           <ul class="form-section__list form-section__list--contacts">
-            <li class="form-section__item form-section__item--contacts">
+            <li class="form-section__item form-section__item--contacts container">
               <label class="form-section__label" for="email">E-mail:*</label>
               <input class="form-section__input form-section__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
             </li>
-            <li class="form-section__item form-section__item--contacts">
+            <li class="form-section__item form-section__item--contacts container">
               <label class="form-section__label" for="phone">Телефон:*</label>
               <input class="form-section__input form-section__input--phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
             </li>
           </ul>
         </fieldset>
         <fieldset class="form-section form-section--comment">
-          <legend class="title title--block">Комментарий</legend>
-          <label class="form-section__label form-section__label--comment">
-            <textarea class="form-section__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
+          <div class="form-section__title-wrap">
+            <div class="container">
+              <legend class="form-section__title">Комментарий</legend>
+            </div>
+          </div>
+          <div class="container">
+            <textarea class="form-section__textarea container" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form-section form-section--extra">
-          <legend class="title title--block">Дополнительно</legend>
+          <div class="form-section__title-wrap">
+            <div class="container">
+              <legend class="form-section__title">Дополнительно</legend>
+            </div>
+          </div>
           <ul class="form-section__list form-section__list--extra">
-            <li class="form-section__item form-section__item--extra">
+            <li class="form-section__item form-section__item--extra container">
               <input class="form-section__input form-section__input--extra visually-hidden" id="substitute" type="checkbox" name="extra-1" value="substitute" checked>
               <label class="form-section__label form-section__label--checkbox" for="substitute">Сахарозаменитель</label>
             </li>
-            <li class="form-section__item form-section__item--extra">
+            <li class="form-section__item form-section__item--extra container">
               <input class="form-section__input form-section__input--extra visually-hidden" id="water" type="checkbox" name="extra-2" value="water">
               <label class="form-section__label form-section__label--checkbox" for="water">Питьевая вода</label>
             </li>
-            <li class="form-section__item form-section__item--extra">
+            <li class="form-section__item form-section__item--extra container">
               <input class="form-section__input form-section__input--extra visually-hidden" id="milk" type="checkbox" name="extra-3" value="milk">
               <label class="form-section__label form-section__label--checkbox" for="milk">Молоко</label>
             </li>
-            <li class="form-section__item form-section__item--extra">
+            <li class="form-section__item form-section__item--extr container">
               <input class="form-section__input form-section__input--extra visually-hidden" id="vitamins" type="checkbox" name="extra-4" value="vitamins">
               <label class="form-section__label form-section__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <div class="form__submit-wrap">
+        <div class="form__submit-wrap container">
           <button class="form__submit button" type="submit">Отправить заявку</button>  
           <p class="form__notice">* — Обязательные поля</p>
         </div>
