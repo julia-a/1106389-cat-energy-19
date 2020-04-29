@@ -147,19 +147,24 @@
               <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
+              <img class="slider__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
               alt="Толстый кот">
             </picture>
             <picture>
               <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="slider__img slider__img--after visually-hidden" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худой кот">
+              <img class="slider__img visually-hidden" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худой кот">
             </picture>
           </div>
-          <label class="slider__label" for="slider__before">Было</label>
-          <input class="slider__before visually-hidden" type="radio" id="before" name="before">
-          <input class="slider__after visually-hidden" type="radio" id="after" name="after">
-          <label class="slider__label" for="slider__after">Стало</label>
+          <div class="slider__actions">
+            <label class="slider__label" for="slider__before">Было</label>
+            <input class="slider__before visually-hidden" type="radio" id="before" name="before">
+            <div class="slider__scale">
+              <div class="slider__grip"></div>
+            </div>
+            <input class="slider__after visually-hidden" type="radio" id="after" name="after">
+            <label class="slider__label" for="slider__after">Стало</label>
+          </div>
         </div>
       </div>
     </section>

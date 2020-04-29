@@ -1,6 +1,5 @@
 .slider {
   padding-top: 20px;
-  padding-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     padding-top: 53px;
@@ -13,10 +12,41 @@
 }
 
 .slider__images {
-  margin: 0 -20px;
+  position: relative;
+  width: 320px;
+  height: 240px;
+
+  @media (min-width: @tablet-width) {
+    width: 690px;
+    height: 517px;
+    margin: 0 9px;
+  }
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    left: 7px;
+  }
+}
+
+.slider__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .slider__label {
+  padding-bottom: 6px;
+
   font-family: @oswald;
   font-size: 16px;
   font-weight: 400;
@@ -24,7 +54,75 @@
   text-transform: uppercase;
   color: @color-black-100;
 
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
+
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+
+  }
+}
+
+.slider__scale {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 14px;
+  margin: 0 18px;
+  padding: 4px 6px;
+
+  background-color: @color-white-100;
+  border: 1px solid @color-gray-400;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 60.5%;
+    height: 6px;
+    margin: -5px 24px 0 24px;
+
+    background-color: @color-gray-400;
+    border: none;
+    border-radius: 2.5px;
+  }
+}
+
+.slider__grip {
+  width: 35px;
+  height: 6px;
+
+  background-color: @color-green-100;
+  border-radius: 3px;
+
+  cursor: pointer; 
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    margin-left: calc(50% - 17px);
+
+    background: radial-gradient(@color-green-100 0, @color-green-100 4px, @color-white-100 5px, @color-white-100 100%);
+    border: 1px solid @color-gray-400;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid @color-green-100;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
   }
 }

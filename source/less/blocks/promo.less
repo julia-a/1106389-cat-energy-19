@@ -34,7 +34,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 42px;
-    padding-left: 118px;
+    padding-left: 88px;
     padding-right: 150px;
 
     text-align: left;
@@ -60,7 +60,12 @@
 
     transform: translate(-50%, 0);
 
-    @media (min-width: @tablet-width) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+    }
+     
+
+     @media (min-width: @tablet-width) {
       top: 75%;
       left: 50%;
 
@@ -69,6 +74,10 @@
 
       background-image: url("../img/index-can-tablet@1x.jpg");
       z-index: -1;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -80,6 +89,10 @@
 
       background-image: url("../img/index-can-desktop@1x.png");
       z-index: 1;
+      
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
     }
   }
 }
