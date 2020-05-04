@@ -28,6 +28,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    z-index: 2;
+  }
 }
 
 .page-header__wrap--closed .page-header__nav-toggle::before {
@@ -96,7 +100,6 @@
   position: absolute;
   top: 50%;
   right: 10px;
-  z-index: 2;
 
   display: block;
   width: 25px;
@@ -108,4 +111,8 @@
 
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
