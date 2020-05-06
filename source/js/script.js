@@ -1,5 +1,5 @@
 var headerWrap = document.querySelector(".page-header__wrap");
-var navToggle = document.querySelector(".main-nav__toggle");
+var navToggle = document.querySelector(".page-header__nav-toggle");
 
 headerWrap.classList.remove("page-header__wrap--nojs");
 
