@@ -3,18 +3,20 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
-var rename = require("gulp-rename");
-var server = require("browser-sync").create();
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var server = require("browser-sync").create();
+var svgstore = require("gulp-svgstore");
+var rename = require("gulp-rename");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin"); //минификация html
+var uglify = require("gulp-uglify"); //минификация js
 
 
 gulp.task("clean", function () {
@@ -62,7 +64,16 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function() {
+  return gulp.src("source/js/*.js", {
+      base: "source"
+    })
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("images", function () {
@@ -105,7 +116,11 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "js"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series(
+  "build", 
+  "server"
+));
