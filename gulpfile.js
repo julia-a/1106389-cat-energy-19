@@ -120,7 +120,4 @@ gulp.task("build", gulp.series(
   "js"
 ));
 
-gulp.task("start", gulp.series(
-  "build", 
-  "server"
-));
+gulp.task("start", gulp.series("build", "server"));
