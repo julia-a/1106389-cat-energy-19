@@ -1,30 +1,75 @@
 .slider {
+  margin: 0 -20px;
   padding-top: 20px;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     padding-top: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -250px;
+    width: 690px;
+    margin-top: -257px;
+    padding-left: 40px;
     padding-top: 0;
   }
 }
 
 .slider__images {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .slider__img {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 49%;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 56%;
+  }
+
   &--after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 0;
+      right: 14px;
+
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -78px;
+    }
+  }
+}
+
+.slider__img--after .slider__picture {
+  @media (min-width: @tablet-width) {
+    transform: translateX(-49%);
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateX(-53%);
   }
 }
 
 .slider__picture {
+  display: block;
+
   width: 320px;
   height: 240px;
 
@@ -37,13 +82,20 @@
 .slider__actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
+    margin-top: 42px;
+  }
 }
 
 .slider__label {
-  padding-bottom: 6px;
-
   font-family: @oswald;
   font-size: 16px;
   font-weight: 400;
@@ -54,6 +106,8 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 6px;
+
     font-size: 20px;
 
     border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
@@ -73,7 +127,7 @@
 .slider__scale {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 26%;
   height: 14px;
   margin: 0 18px;
   padding: 4px 6px;
@@ -83,13 +137,17 @@
   border-radius: 6px;
 
   @media (min-width: @tablet-width) {
-    width: 60.5%;
+    width: 428px;
     height: 6px;
     margin: -5px 24px 0 24px;
 
     background-color: @color-gray-400;
     border: none;
     border-radius: 2.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 425px;
   }
 }
 

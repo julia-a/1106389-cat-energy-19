@@ -23,12 +23,15 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 50%;
-    left: 90px;
+    left: 110px;
 
     width: 570px;
     padding: 60px 0 60px 76px;
+
     background-color: @color-white-100;
+
     transform: translate(0, -50%);
+    z-index: 3;
   }
 }
 
@@ -80,7 +83,10 @@
 
 
 .contacts__map {
+  width: 100%;
   height: 362px;
+
+  border: none;
 
   z-index: 2;
 
