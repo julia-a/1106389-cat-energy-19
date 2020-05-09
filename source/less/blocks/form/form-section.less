@@ -30,8 +30,8 @@
     padding-left: calc((100% - 280px) / 2);
     padding-right: calc((100% - 280px) / 2);
 
-    border-top: 1px solid @color-gray-150;
-    border-bottom: 1px solid @color-gray-150;
+    border-top: 1px solid @color-gray-200;
+    border-bottom: 1px solid @color-gray-200;
 
     @media (min-width: @tablet-width) {
       padding-left: calc((100% - 708px) / 2);
@@ -48,24 +48,30 @@
   }
 
   &--contacts {
-    margin-top: 31px;
+    margin-top: -19px;
+    margin-bottom: -25px;
 
     @media (min-width: @tablet-width) {
-      margin-top: 75px;
-      margin-bottom: 65px;
+      margin-top: -32px;
+      margin-bottom: 0;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 69px;
-      margin-bottom: 68px;
+      margin-top: 33px;
+      margin-bottom: 33px;
     }
   }
 
   &--comment {
     margin-top: 30px;
+    margin-bottom: -24px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 65px;
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 29px;
     }
   }
 
@@ -86,7 +92,7 @@
     content: "";
 
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 0;
 
     width: 100%;
@@ -95,15 +101,15 @@
     background: @color-green-100;
 
     @media (min-width: @tablet-width) {
-      top: 60%;
+      top: 55%;
     }
   }
 
   &--contacts::before {
-    top: 30%;
+    top: 40%;
 
     @media (min-width: @tablet-width) {
-      top: 60%;
+      top: 55%;
     }
   }
 }
@@ -111,7 +117,7 @@
 .form-section__title {
   position: relative;
 
-  margin-bottom: 33px;
+  display: inline-block;
   margin-left: -20px;
   padding: 0 20px;
 
@@ -124,18 +130,16 @@
 
   background: @color-white-100;
 
-  z-index: 1;
-
   @media (min-width: @tablet-width) {
     margin-left: 0;
     padding: 0 40px;
+
     font-size: 36px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: -40px;
   }
-
 
   &--contact {
     width: 80%;
@@ -174,13 +178,15 @@
       margin: 0 40px;
       padding: 25px 28px 29px 28px;
 
-      border: 1px solid @color-gray-150;
+      border: 1px solid @color-gray-200;
     }
   }
 
   &--contacts {
+    margin-top: 10px;
+
     @media (min-width: @tablet-width) {
-      margin-top: 75px;
+      margin-top: 38px;
     }
 
     @media (min-width: @desktop-width) {
@@ -191,15 +197,17 @@
   }
 
   &--extra {
+    margin-top: 10px;
+
     @media (min-width: @tablet-width) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 56px;
+      margin-top: 22px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 60px;
+      margin-top: 23px;
     }
   }
 }
@@ -268,7 +276,8 @@
   background-repeat: no-repeat;
 
   border: none;
-  outline: solid 1px @color-gray-150;
+  order: none;
+  outline: solid 1px @color-gray-200;
 
   @media (min-width: @tablet-width) {
     padding: 14px 22px;
@@ -282,16 +291,16 @@
 
   &::placeholder {
     text-transform: uppercase;
-    color: @color-gray-500;
+    color: @color-gray-800;
   }
 
   &:hover,
   &:focus {
-    outline: solid 1px @color-gray-400;
+    outline: solid 1px @color-gray-500;
   }
 
   &:active {
-    outline: solid 2px @color-gray-500;
+    outline: solid 2px @color-gray-800;
   }
 
   &:invalid {
@@ -360,7 +369,7 @@
   width: 30px;
   height: 30px;
 
-  border: 1px solid @color-gray-400;
+  border: 1px solid @color-gray-500;
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -418,7 +427,7 @@
 .form-section__input:hover + .form-section__label--checkbox::before,
 .form-section__input:focus + .form-section__label--radio::before,
 .form-section__input:focus + .form-section__label--checkbox::before {
-  border: 1px solid @color-gray-450;
+  border: 1px solid @color-gray-600;
 }
 
 .form-section__input:active + .form-section__label--radio,
@@ -428,21 +437,24 @@
 
 .form-section__textarea {
   min-height: 150px;
+  margin-top: 10px;
   padding-left: 14px;
   padding-right: 12px;
 
   resize: vertical;
 
   @media (min-width: @tablet-width) {
+    width: 89%;
     min-height: 174px;
-    margin: 45px 40px 0 40px;
+    margin: 42px 40px 0 40px;
     padding-left: 19px;
     padding-right: 19px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
     margin: 0;
-    margin-top: 43px;
+    margin-top: 40px;
     padding: 15px 18px;
   }
 }
