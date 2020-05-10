@@ -58,20 +58,24 @@
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
-
-    &--index {
-      color: @color-white-100;
-    }
-
-    &--index-active {
-      color: @color-white-100;
-      border-bottom: 2px solid @color-white-100;
-    }
   }
 
   &--active {
     @media (min-width: @tablet-width) {
       border-bottom: 2px solid @color-green-100;
+    }
+  }
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      color: @color-white-100;
+    }
+  }
+
+  &--index-active {
+    @media (min-width: @desktop-width) {
+      color: @color-white-100;
+      border-bottom: 2px solid @color-white-100;
     }
   }
 }
