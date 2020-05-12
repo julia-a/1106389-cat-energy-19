@@ -80,7 +80,7 @@
   padding-right: calc((100% - 280px) / 2);
 
   font-size: 14px;
-  line-height: 1px;
+  line-height: 1;
   color: @color-gray-800;
 
   @media (min-width: @tablet-width) {
@@ -150,6 +150,16 @@
   }
 }
 
+.extra-products__field {
+  @media (min-width: @tablet-width) {
+    margin-right: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
 .extra-products__value {
   @media (min-width: @desktop-width) {
     text-align: right;
@@ -172,15 +182,5 @@
     margin: 14px 0 17px 40px;
 
     padding: 10px 20px;
-  }
-}
-
-.extra-products__field {
-  @media (min-width: @tablet-width) {
-    margin-right: 52px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
   }
 }
