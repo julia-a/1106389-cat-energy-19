@@ -1,5 +1,5 @@
 .form-section {
-  margin: 38px 0 25px 0;
+  margin: 40px 0 23px 0;
   padding: 0;
 
   border: none;
@@ -48,7 +48,7 @@
   }
 
   &--contacts {
-    margin-top: -19px;
+    margin-top: -16px;
     margin-bottom: -25px;
 
     @media (min-width: @tablet-width) {
@@ -58,7 +58,7 @@
 
     @media (min-width: @desktop-width) {
       margin-top: 33px;
-      margin-bottom: 33px;
+      margin-bottom: 31px;
     }
   }
 
@@ -67,7 +67,7 @@
     margin-bottom: -24px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 26px;
+      margin-bottom: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -76,8 +76,13 @@
   }
 
   &--extra {
-    margin-top: 27px;
-    margin-bottom: 23px;
+    margin-top: 26px;
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-bottom: 30px;
@@ -186,7 +191,7 @@
     margin-top: 10px;
 
     @media (min-width: @tablet-width) {
-      margin-top: 38px;
+      margin-top: 40px;
     }
 
     @media (min-width: @desktop-width) {
@@ -197,7 +202,7 @@
   }
 
   &--extra {
-    margin-top: 10px;
+    margin-top: 9px;
 
     @media (min-width: @tablet-width) {
       display: flex;
@@ -222,7 +227,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   &--contacts {
@@ -270,7 +275,7 @@
 .form-section__input,
 .form-section__textarea {
   width: 100%;
-  padding: 13px;
+  padding: 12px 13px 14px 13px;
 
   line-height: 18px;
   text-transform: uppercase;
@@ -330,10 +335,6 @@
 
     @media (min-width: @tablet-width) {
       padding-left: 19px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 17px;
     }
   }
 }
